@@ -48,7 +48,7 @@ android {
 
         signingConfig = signingConfigs.getByName("AceKeystore")
 
-        buildConfigField("String", "FrpVersion", "\"0.61.1\"")
+        buildConfigField("String", "FrpVersion", "\"0.62.1\"")
         buildConfigField("String", "FrpcFileName", "\"libfrpc.so\"")
         buildConfigField("String", "FrpsFileName", "\"libfrps.so\"")
         buildConfigField("String", "FrpcConfigFileName", "\"frpc.toml\"")
@@ -89,8 +89,8 @@ android {
         abi {
             isEnable = true
             reset()
-            include("arm64-v8a", "x86_64", "armeabi-v7a")
-            isUniversalApk = true
+            include("arm64-v8a")
+            isUniversalApk = false
         }
     }
     namespace = "io.github.acedroidx.frp"
